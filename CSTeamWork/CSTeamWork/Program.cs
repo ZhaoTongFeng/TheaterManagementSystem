@@ -10,6 +10,7 @@ namespace CSTeamWork
     {
         static void Main(string[] args)
         {
+            Console.Write("123");
         }
     }
 }
