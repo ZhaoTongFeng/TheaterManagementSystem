@@ -27,7 +27,7 @@
 **图片如果加载不出来，可以下载帮助文档自行查看**
 
 #### 用例图
-![123](http://llag.net/markdown-img/0.用例图_1.png)
+![123](http://llag.net/markdown-img/0.1.用例图.png)
 #### 数据库ER图
 ![123](http://llag.net/markdown-img/0.ER图.png)
 #### 类图
