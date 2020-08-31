@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="174daab32bec4c59b9eaf3a164d4480f" Name="Diagram1" ZoomLevel="147">
+        <EntityTypeShape EntityType="Database1Model.Movie" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Order" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Payment" Width="1.5" PointX="7.875" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="Database1Model.FK_Schedule_ToMovie" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Order_ToPayment" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Order_ToSchedule" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

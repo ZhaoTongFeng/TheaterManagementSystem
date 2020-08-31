@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Movie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="State" Type="int" Nullable="false" />
+          <Property Name="Length" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="StartPlayingTime" Type="date" />
+          <Property Name="EndPlayingTime" Type="date" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Language" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="img_path" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Director" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Scriptwriter" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Actor" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Introduce" Type="nvarchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScheduleID" Type="int" Nullable="false" />
+          <Property Name="SiteIDs" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="PaymentId" Type="int" Nullable="false" />
+          <Property Name="States" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="SourceType" Type="int" Nullable="false" />
+          <Property Name="SourceId" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MovieId" Type="int" Nullable="false" />
+          <Property Name="RoomName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="SiteState" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="State" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Order_ToPayment">
+          <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="PaymentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_ToSchedule">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schedule_ToMovie">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedule">
+              <PropertyRef Name="MovieId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Order_ToPayment" Association="Self.FK_Order_ToPayment">
+            <End Role="Payment" EntitySet="Payment" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_ToSchedule" Association="Self.FK_Order_ToSchedule">
+            <End Role="Schedule" EntitySet="Schedule" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schedule_ToMovie" Association="Self.FK_Schedule_ToMovie">
+            <End Role="Movie" EntitySet="Movie" />
+            <End Role="Schedule" EntitySet="Schedule" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Movie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Int32" Nullable="false" />
+          <Property Name="Length" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="StartPlayingTime" Type="DateTime" Precision="0" />
+          <Property Name="EndPlayingTime" Type="DateTime" Precision="0" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="img_path" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Director" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Scriptwriter" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Actor" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Introduce" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Schedule" Relationship="Self.FK_Schedule_ToMovie" FromRole="Movie" ToRole="Schedule" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" />
+          <Property Name="SiteIDs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PaymentId" Type="Int32" Nullable="false" />
+          <Property Name="States" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Payment" Relationship="Self.FK_Order_ToPayment" FromRole="Order" ToRole="Payment" />
+          <NavigationProperty Name="Schedule" Relationship="Self.FK_Order_ToSchedule" FromRole="Order" ToRole="Schedule" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="SourceType" Type="Int32" Nullable="false" />
+          <Property Name="SourceId" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_ToPayment" FromRole="Payment" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MovieId" Type="Int32" Nullable="false" />
+          <Property Name="RoomName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="SiteState" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Movie" Relationship="Self.FK_Schedule_ToMovie" FromRole="Schedule" ToRole="Movie" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_ToSchedule" FromRole="Schedule" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK_Schedule_ToMovie">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedule">
+              <PropertyRef Name="MovieId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_ToPayment">
+          <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="PaymentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_ToSchedule">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1Entities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Movie" EntityType="Self.Movie" />
+          <EntitySet Name="Order" EntityType="Self.Order" />
+          <EntitySet Name="Payment" EntityType="Self.Payment" />
+          <EntitySet Name="Schedule" EntityType="Self.Schedule" />
+          <AssociationSet Name="FK_Schedule_ToMovie" Association="Self.FK_Schedule_ToMovie">
+            <End Role="Movie" EntitySet="Movie" />
+            <End Role="Schedule" EntitySet="Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_ToPayment" Association="Self.FK_Order_ToPayment">
+            <End Role="Payment" EntitySet="Payment" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_ToSchedule" Association="Self.FK_Order_ToSchedule">
+            <End Role="Schedule" EntitySet="Schedule" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities2">
+          <EntitySetMapping Name="Movie">
+            <EntityTypeMapping TypeName="Database1Model.Movie">
+              <MappingFragment StoreEntitySet="Movie">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="StartPlayingTime" ColumnName="StartPlayingTime" />
+                <ScalarProperty Name="EndPlayingTime" ColumnName="EndPlayingTime" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="img_path" ColumnName="img_path" />
+                <ScalarProperty Name="Director" ColumnName="Director" />
+                <ScalarProperty Name="Scriptwriter" ColumnName="Scriptwriter" />
+                <ScalarProperty Name="Actor" ColumnName="Actor" />
+                <ScalarProperty Name="Introduce" ColumnName="Introduce" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="Database1Model.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="SiteIDs" ColumnName="SiteIDs" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+                <ScalarProperty Name="States" ColumnName="States" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payment">
+            <EntityTypeMapping TypeName="Database1Model.Payment">
+              <MappingFragment StoreEntitySet="Payment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+                <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule">
+            <EntityTypeMapping TypeName="Database1Model.Schedule">
+              <MappingFragment StoreEntitySet="Schedule">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="SiteState" ColumnName="SiteState" />
+                <ScalarProperty Name="State" ColumnName="State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

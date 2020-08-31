@@ -1,0 +1,49 @@
+﻿<Page x:Class="FinalProject.UI.SitePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SitePage">
+
+    <Grid Name="SiteGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="6"  Background="#FFB6A7A7">
+            <Label  Content="屏幕" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        </Grid>
+        <WrapPanel Grid.Row="6" Grid.ColumnSpan="12" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0">
+            <Label Content="已选 0 个座位，总计：0 ￥" Name="messageLab"/>
+            <Button Name="CompleteChoseSite" Content="下单" Width="50" Click="CompleteChoseSite_Click" />
+        </WrapPanel>
+        <Label Grid.Column="0" Grid.Row="6" Background="Black" Content="可选" Foreground="White"  VerticalAlignment="Center" Margin="4,4,4,4"></Label>
+        <Label Grid.Column="1" Grid.Row="6" Background="Blue" Content="不可选" Foreground="White" VerticalAlignment="Center" Margin="4,4,4,4" ></Label>
+        <Label Grid.Column="2" Grid.Row="6" Background="Red" Content="已选" Foreground="White"  VerticalAlignment="Center" Margin="4,4,4,4"></Label>
+    </Grid>
+ 
+
+
+</Page>

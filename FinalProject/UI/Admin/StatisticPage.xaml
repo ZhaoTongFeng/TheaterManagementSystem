@@ -1,0 +1,50 @@
+﻿<Page x:Class="FinalProject.UI.StatisticPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StatisticPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Stretch">
+            <Label Content="档期就座率"></Label>
+            <DataGrid Name="ScheduleDataGrid"></DataGrid>
+            <Label Content="电影上座数"></Label>
+            <DataGrid Name="MovieDataGrid"></DataGrid>
+            <Label Content="订单销售统计"></Label>
+            <DataGrid Name="OrderDataGrid"></DataGrid>
+        </StackPanel>
+        
+        
+        
+        <Grid Grid.Column="1" Margin="8,0,8,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Calendar Grid.Row="0" Name="StatisticCalendar" MouseDoubleClick="StatisticCalendar_MouseDoubleClick"/>
+            
+            <Label Name="selectTime" Content="" Grid.Row="1"></Label>
+            <Label Name="TotalPrice" Content="总销售额: 0 元" Grid.Row="2"></Label>
+            <Label Name="AvgRate" Content="上座率: 0 %" Grid.Row="3"></Label>
+            <Label Name="AvgNum" Content="平均上座人数: 0 人" Grid.Row="4"></Label>
+            
+        </Grid>
+        
+        
+        
+        
+    </Grid>
+
+</Page>

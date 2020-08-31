@@ -1,0 +1,24 @@
+﻿<Window x:Class="FinalProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="367" Width="404" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="影院管理系统DEMO" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></Label>
+
+        <Button Grid.Row="2" Content="用户界面" FontSize="20"  Click="Button_Click" Margin="20" />
+        <Button Grid.Row="3"  Content="管理员界面"  FontSize="20" Click="Button_Click" Margin="20" />
+        <Label Grid.Row="1" Content="作者：赵桐锋 李晗浩" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

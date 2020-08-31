@@ -1,0 +1,28 @@
+﻿<Page x:Class="FinalProject.UI.ResultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ResultPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Background="#FFC8C8C8"></Label>
+        <Label Grid.Column="1" Grid.Row="1" Content="付款成功" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28"></Label>
+        <Label Grid.Column="1" Grid.Row="2" Content="正在出票..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></Label>
+    </Grid>
+</Page>
