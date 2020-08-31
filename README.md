@@ -31,7 +31,7 @@
 #### 数据库ER图
 ![123](http://llag.net/markdown-img/0.ER图.png)
 #### 类图
-![123](http://llag.net/markdown-img/0.类图.png)
+![123](http://llag.net/markdown-img/0.2.类图.png)
 #### 序列图
 ![123](http://llag.net/markdown-img/0.序列图-购票.png)
 
