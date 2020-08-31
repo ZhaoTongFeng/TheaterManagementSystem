@@ -44,7 +44,7 @@
 ![客户端-主页](http://llag.net/markdown-img/2.1.客户端-主页.png)
 
 ## 客户端-购票
-![客户端-购票](http://llag.net/markdown-img/2.2.客户端-购票_1.png)
+![客户端-购票](http://llag.net/markdown-img/2.2.客户端-购票_2.png)
 
 ## 客户端-档期
 ![客户端-档期](http://llag.net/markdown-img/2.5.客户端-档期.png)
