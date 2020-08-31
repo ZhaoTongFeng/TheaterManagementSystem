@@ -2,8 +2,6 @@
 # 影院管理和售票系统
 本项目为 **C#** 和 **软件工程** 课程作业，技术和能力有限，可能存在很多问题，仅供参考。
 
-![123](http://llag.net/markdown-img/wqeqw.jpg)
-
 ## 简介
 
 本系统分管理端和客户端两个子系统
@@ -41,8 +39,30 @@
 *所有用例均有序列图，请下载演示PPT进行查看
 
 #### 界面截图
-![123](http://llag.net/markdown-img/wqeqw.jpg)
 
+##### 客户端-主页
+![客户端-主页](http://llag.net/markdown-img/2.1.客户端-主页.png)
+
+##### 客户端-购票
+![客户端-购票](http://llag.net/markdown-img/2.2.客户端-购票.png)
+
+##### 客户端-档期
+![客户端-档期](http://llag.net/markdown-img/2.5.客户端-档期.png)
+
+##### 客户端-选座
+![客户端-选座](http://llag.net/markdown-img/2.4.客户端-选座.png)
+
+##### 客户端-付款
+![客户端-付款](http://llag.net/markdown-img/2.6.客户端-付款.png)
+
+##### 管理端-主页
+![管理端-主页](http://llag.net/markdown-img/1.1.管理端-主页.png)
+
+##### 管理端-档期
+![管理端-档期](http://llag.net/markdown-img/1.2.管理端-档期.png)
+
+##### 管理端-导入
+![管理端-导入](http://llag.net/markdown-img/1.3.管理端-导入.png)
 
 
 ## 运行
