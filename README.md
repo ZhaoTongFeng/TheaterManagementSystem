@@ -57,10 +57,8 @@
 
 ##### 管理端-主页
 ![管理端-主页](http://llag.net/markdown-img/1.1.管理端-主页.png)
-
 ##### 管理端-档期
 ![管理端-档期](http://llag.net/markdown-img/1.2.管理端-档期.png)
-
 ##### 管理端-导入
 ![管理端-导入](http://llag.net/markdown-img/1.3.管理端-导入.png)
 
