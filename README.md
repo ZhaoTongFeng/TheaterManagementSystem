@@ -30,13 +30,13 @@
 ## 预览
 
 #### 用例图
-![123](http://llag.net/markdown-img/wqeqw.jpg)
+![123](http://llag.net/markdown-img/0.用例图.png)
 #### 数据库ER图
-![123](http://llag.net/markdown-img/wqeqw.jpg)
+![123](http://llag.net/markdown-img/0.ER图.png)
 #### 类图
 ![123](http://llag.net/markdown-img/0.类图.png)
 #### 序列图
-![123](http://llag.net/markdown-img/wqeqw.jpg)
+![123](http://llag.net/markdown-img/0.序列图-购票.png)
 
 *所有用例均有序列图，请下载演示PPT进行查看
 
