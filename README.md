@@ -21,29 +21,36 @@
   - 选择座位
   - 付款
 
-*付款功能仅仅做了设计，没有具体实现
 
-## 预览
+
+
+## 软件工程
 **图片如果加载不出来，可以下载帮助文档自行查看**
 
 #### 用例图
-
+最开始画了几层，到最后只剩一层，这样比较清晰
 <div align=center><img src="http://llag.net/markdown-img/TMS/0.1.F.用例图.png" alt="用例图"/></div>
 
 
 
 #### 数据库ER图
+所有State为枚举值，类型可能为布尔值或者在Config文件中进行定义，
+
+直接定义枚举值而不使用枚举类型，效果差不多，但是代码看上去就没有层次感
 <div align=center><img src="http://llag.net/markdown-img/TMS/0.2.F.ER图.jpg" alt="ER图"/></div>
 
 
 #### 类图
+分解类图见PPT
 <div align=center><img src="http://llag.net/markdown-img/TMS/0.3.F.类图.jpg" alt="类图"/></div>
 
 
 #### 序列图
+所有用例均有序列图，请下载演示PPT进行查看
 <div align=center><img src="http://llag.net/markdown-img/TMS/0.4.F.序列图-购票.png" alt="序列图-购票"/></div>
 
-*所有用例均有序列图，请下载演示PPT进行查看
+注意：判断之后执行不同事件的部分画错了
+
 
 ## 界面截图
 
@@ -122,7 +129,7 @@
 * 软件说明书
 * 演示PPT
 
-见doc目录
+都在项目doc目录
 
 #### 环境配置
 需要安装数据库
@@ -141,7 +148,7 @@
 但是考虑到，现代的影院管理系统不可能是单机系统，所以在整体上采取的MVC架构，前后端基本上是完全分离的，
 采用字典进行数据交互，所以这个项目可以很轻松的扩展成一个网络应用程序
 
-你可能会感觉到Controller非常多余，因为仅仅都是对Service函数的包装，我也这么觉得。
+可能会感觉到Controller非常多余，因为仅仅都是对Service函数的包装，我也这么觉得。
 但是又不得不承认，麻烦归麻烦，Controller对Service进行一个分类和汇总，用户和管理员对于同样一个ShowXXX方法，可见度不同,
 比如显示电影列表，用户只想看到正在上映的，而管理员可能还需要看到已下架的和即将上映的。
 因为有两个前端，所以我觉得用两个Controller来封装Service的函数，以此来建议前端允许调用的函数，
