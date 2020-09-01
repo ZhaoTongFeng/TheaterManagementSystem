@@ -27,63 +27,79 @@
 **图片如果加载不出来，可以下载帮助文档自行查看**
 
 #### 用例图
-![用例图](http://llag.net/markdown-img/TMS/0.1.F.用例图.png)
+
+<div align=center><img src="http://llag.net/markdown-img/TMS/0.1.F.用例图.png" alt="用例图"/></div>
+
+
+
 #### 数据库ER图
-![ER图](http://llag.net/markdown-img/TMS/0.2.F.ER图.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/0.2.F.ER图.jpg" alt="ER图"/></div>
+
+
 #### 类图
-![类图](http://llag.net/markdown-img/TMS/0.3.F.类图.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/0.3.F.类图.jpg" alt="类图"/></div>
+
+
 #### 序列图
-![序列图-购票](http://llag.net/markdown-img/TMS/0.4.F.序列图-购票.png)
+<div align=center><img src="http://llag.net/markdown-img/TMS/0.4.F.序列图-购票.png" alt="序列图-购票"/></div>
 
 *所有用例均有序列图，请下载演示PPT进行查看
 
-# 界面截图
+## 界面截图
 
-## 客户端-主页
+#### 客户端-主页
 顾客门户，显示最近场次
 
-![客户端-主页](http://llag.net/markdown-img/TMS/2.1.F.客户端-主页.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/2.1.F.客户端-主页.jpg" alt="客户端-主页"/></div>
 
 
-## 客户端-购票
+#### 客户端-购票
 显示所有上映的电影
 
-![客户端-购票](http://llag.net/markdown-img/TMS/2.2.F.客户端-购票.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/2.2.F.客户端-购票.jpg" alt="客户端-购票"/></div>
 
 
-## 客户端-档期
+
+
+#### 客户端-档期
 显示某部电影的档期
+<div align=center><img src="http://llag.net/markdown-img/TMS/2.5.F.客户端-档期.jpg" alt="客户端-档期"/></div>
 
-![客户端-档期](http://llag.net/markdown-img/TMS/2.5.F.客户端-档期.jpg)
 
-## 客户端-选座
+
+#### 客户端-选座
 网格做的一个简单的选座页面
+<div align=center><img src="http://llag.net/markdown-img/TMS/2.4.F.客户端-选座.jpg" alt="客户端-选座"/></div>
 
-![客户端-选座](http://llag.net/markdown-img/TMS/2.4.F.客户端-选座.jpg)
 
-## 客户端-付款
+
+#### 客户端-付款
 这个页面主要是对之前选择的数据进行汇总显示，在文档中针对付款这部分进行了设计，因为条件不限制，并没有进行实际编写，所以代码中有些地方可能存在问题
 
-![客户端-付款](http://llag.net/markdown-img/TMS/2.6.F.客户端-付款.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/2.6.F.客户端-付款.jpg" alt="客户端-付款"/></div>
 
 
-## 管理端-主页
+
+
+#### 管理端-主页
 这个页面显示当前正在上映的电影，允许管理员对电影进行下架操作
 
 已知的BUG：因为对电影院管理体系不太熟悉，这个功能感觉没有任何实用价值
 
-![管理端-主页](http://llag.net/markdown-img/TMS/1.1.F.管理端-主页.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/1.1.F.管理端-主页.jpg" alt="管理端-主页"/></div>
 
 
-## 管理端-档期
+
+
+#### 管理端-档期
 这个地方主要是做的显示日历日期对应的档期，以及输入电影的比例自动排制档期功能，具体功能和算法在PPT中有介绍
 
 当时测试的时候，因为添加的电影数量过多，导致场次安排上不是很合理，一般来说，电影院不会同时上映这么多电影
 
-![管理端-档期](http://llag.net/markdown-img/TMS/1.2.F.管理端-档期.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/1.2.F.管理端-档期.jpg" alt="管理端-档期"/></div>
 
 
-## 管理端-导入
+#### 管理端-导入
 支持两种方式进行导入
 * 直接输入
 * 从文件导入
@@ -94,7 +110,9 @@
 
 如果要真正实现从文件中导入，可以采取打开JSON/XML文件的方式，将数据读取到字典，再插入
 
-![管理端-导入](http://llag.net/markdown-img/TMS/1.3.F.管理端-导入.jpg)
+<div align=center><img src="http://llag.net/markdown-img/TMS/1.3.F.管理端-导入.jpg" alt="管理端-导入"/></div>
+
+
 
 
 ## 运行
