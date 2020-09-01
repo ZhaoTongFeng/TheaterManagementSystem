@@ -94,7 +94,7 @@
 
 如果要真正实现从文件中导入，可以采取打开JSON/XML文件的方式，将数据读取到字典，再插入
 
-![管理端-导入](http://llag.net/markdown-img/1.3.F.管理端-导入.jpg)
+![管理端-导入](http://llag.net/markdown-img/TMS/1.3.F.管理端-导入.jpg)
 
 
 ## 运行
