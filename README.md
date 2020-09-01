@@ -27,13 +27,13 @@
 **图片如果加载不出来，可以下载帮助文档自行查看**
 
 #### 用例图
-![123](http://llag.net/markdown-img/0.1.用例图.png)
+![123](http://llag.net/markdown-img/0.1.F.用例图.png)
 #### 数据库ER图
-![123](http://llag.net/markdown-img/0.ER图.png)
+![123](http://llag.net/markdown-img/0.2.F.ER图.jpg)
 #### 类图
-![123](http://llag.net/markdown-img/0.2.类图.png)
+![123](http://llag.net/markdown-img/0.3.F.类图.jpg)
 #### 序列图
-![123](http://llag.net/markdown-img/0.序列图-购票.png)
+![123](http://llag.net/markdown-img/0.4.F.序列图-购票.png)
 
 *所有用例均有序列图，请下载演示PPT进行查看
 
@@ -42,29 +42,29 @@
 ## 客户端-主页
 顾客门户，显示最近场次
 
-![客户端-主页](http://llag.net/markdown-img/2.1.客户端-主页_1.png)
+![客户端-主页](http://llag.net/markdown-img/2.1.F.客户端-主页.jpg)
 
 
 ## 客户端-购票
 显示所有上映的电影
 
-![客户端-购票](http://llag.net/markdown-img/2.2.客户端-购票_2.png)
+![客户端-购票](http://llag.net/markdown-img/2.2.F.客户端-购票.jpg)
 
 
 ## 客户端-档期
 显示某部电影的档期
 
-![客户端-档期](http://llag.net/markdown-img/2.5.客户端-档期_1.png)
+![客户端-档期](http://llag.net/markdown-img/2.5.F.客户端-档期.jpg)
 
 ## 客户端-选座
 网格做的一个简单的选座页面
 
-![客户端-选座](http://llag.net/markdown-img/2.4.客户端-选座_1.png)
+![客户端-选座](http://llag.net/markdown-img/2.4.F.客户端-选座.jpg)
 
 ## 客户端-付款
 这个页面主要是对之前选择的数据进行汇总显示，在文档中针对付款这部分进行了设计，因为条件不限制，并没有进行实际编写，所以代码中有些地方可能存在问题
 
-![客户端-付款](http://llag.net/markdown-img/2.6.客户端-付款.png)
+![客户端-付款](http://llag.net/markdown-img/2.6.F.客户端-付款.jpg)
 
 
 ## 管理端-主页
@@ -72,7 +72,7 @@
 
 已知的BUG：因为对电影院管理体系不太熟悉，这个功能感觉没有任何实用价值
 
-![管理端-主页](http://llag.net/markdown-img/1.1.管理端-主页.png)
+![管理端-主页](http://llag.net/markdown-img/1.1.F.管理端-主页.jpg)
 
 
 ## 管理端-档期
@@ -80,7 +80,7 @@
 
 当时测试的时候，因为添加的电影数量过多，导致场次安排上不是很合理，一般来说，电影院不会同时上映这么多电影
 
-![管理端-档期](http://llag.net/markdown-img/1.2.管理端-档期_2.png)
+![管理端-档期](http://llag.net/markdown-img/1.2.F.管理端-档期.jpg)
 
 
 ## 管理端-导入
@@ -94,7 +94,7 @@
 
 如果要真正实现从文件中导入，可以采取打开JSON/XML文件的方式，将数据读取到字典，再插入
 
-![管理端-导入](http://llag.net/markdown-img/1.3.管理端-导入.png)
+![管理端-导入](http://llag.net/markdown-img/1.3.F.管理端-导入.jpg)
 
 
 ## 运行
