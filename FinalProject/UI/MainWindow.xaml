@@ -19,6 +19,6 @@
 
         <Button Grid.Row="2" Content="用户界面" FontSize="20"  Click="Button_Click" Margin="20" />
         <Button Grid.Row="3"  Content="管理员界面"  FontSize="20" Click="Button_Click" Margin="20" />
-        <Label Grid.Row="1" Content="作者：赵桐锋 李晗浩" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>
