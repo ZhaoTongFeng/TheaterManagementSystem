@@ -3,7 +3,7 @@ C#和软件工程的课程大作业，仅供参考
 
 这里只简单介绍，说明书和演示PPT在项目doc目录下
 
-下载地址：[Github](https://github.com/ZhaoTongFeng/TheaterManagementSystem)
+下载地址：[Github](https://github.com/ZhaoTongFeng/TheaterManagementSystem)，[百度云](https://pan.baidu.com/s/1ULTYft2IjvuzcTym58x3dQ)提取码：47jc
 大小：12MB
 ## 简介
 按照系统划分，由管理端和顾客端两个子系统组成
